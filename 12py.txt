@@ -1,0 +1,14 @@
+def sort_tuple(t):
+    sorted_t = sorted(t)
+    n = len(sorted_t)
+    result = []
+    for i in range(n//2):
+        result.append(sorted_t[-i-1])
+        result.append(sorted_t[i])
+    if n % 2 != 0:
+        result.append(sorted_t[n//2])
+    return tuple(result)
+
+t = (3, 1, 4, 2, 5)
+result = sort_tuple(t)
+print(result)
